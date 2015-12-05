@@ -1,0 +1,20 @@
+{
+    "name": "m1so/php-xpp",
+    "description": "PHP client and parser for XPPAut",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michal Baumgartner",
+            "email": "miso.baumgartner@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Baumgartner\\Xpp\\": "src"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+# Goodwinov model
+
+#phi(x)=infl_ex-sklon*(x-nezam_ex)
+phi(x)=0.57*(1-x)^2-8*(1-x)+5
+#phi(x)=150*exp(-20*(1-x))-0.15
+#phi(x)=0.123*exp(-22*(1-x))
+#phi(x)=((50^(1-x))-1)/(50-1)-0.1
+u'=u*(phi(v)-alpha) 
+v'=v*( (1/r)*(1-u)-delta-alpha-beta )
+
+init u=0.15
+init v=0.05
+
+param alpha=0.01,beta=0.01,delta=0.1,r=3,sklon=0.43,infl_ex=0.035,nezam_ex=0.051
+@xmin=-0.1,ymin=-0.1,xmax=1.1,ymax=1.1,total=1000,xp=u,yp=v,xlo=0,ylo=0,xhi=1.5,yhi=1.5,nmesh=400
+
+done
