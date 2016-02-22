@@ -53,8 +53,8 @@ class Client
             $this->resultFilePath,
             $this->logFilePath
         );
-        
-        return exec($command);
+
+        return shell_exec($command);
     }
 
     public function getParser()
