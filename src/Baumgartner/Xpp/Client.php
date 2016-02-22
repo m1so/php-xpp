@@ -42,6 +42,11 @@ class Client
         $this->parser = new Parser($this->odeFilePath);
     }
 
+    /**
+     * Run XPP executable
+     *
+     * @return mixed Status code returned from command
+     */
     public function run()
     {
         $this->parser->parse();
@@ -54,7 +59,10 @@ class Client
             $this->logFilePath
         );
 
-        return shell_exec($command);
+        // We don't need output, since we are using silent flag and specifying log file path
+        exec($command, $output, $status);
+
+        return $status;
     }
 
     public function getParser()
