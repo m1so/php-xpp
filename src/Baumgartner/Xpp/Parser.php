@@ -131,6 +131,11 @@ class Parser {
         // Remove comment from line
         $line = $this->removeCommentFromLine($line);
 
+        // Skip empty lines
+        if (strlen(trim($line)) === 0) {
+            return;
+        }
+
         // If line now contains "par" add to parameter bag
         $this->addParametersToBagFromLine($line);
 
